@@ -1,15 +1,81 @@
-body {
-  background-image: url(background2.jpg);
+:root {
+  --main-radius: 5px;
+  --main-padding: 5px;
 }
-.mainBody {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.container {
+  display: grid;
+  height: 300vh;
+  grid-gap: 0.2rem;
+  grid-template-columns: 2fr 5fr 5fr 5fr;
+  grid-template-rows: 0.3fr 1.5fr 0.3fr 1fr 0.8fr;
+  grid-template-areas:
+    " nav nav nav nav"
+    "sidebar main main main"
+    "sidebar title title title"
+    "sidebar content1 content2 content3"
+    "footer footer footer footer";
+}
+nav {
+  grid-area: nav;
+  background: #cbccf2;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+main {
+  grid-area: main;
+  background: #9b9de5;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+#sidebar {
+  grid-area: sidebar;
+  background: #676bf1;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+#title {
+  grid-area: title;
+  background: #5593f5;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+#content1 {
+  grid-area: content1;
+  background: #d9d9d9;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+#content2 {
+  grid-area: content2;
+  background: #ccc6c6;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+#content3 {
+  grid-area: content3;
+  background: #afafaf;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+footer {
+  grid-area: footer;
+  background: #9fa2fc;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+.mainLogo {
   align-content: center;
+  justify-items: center;
 }
-
-img {
+.item {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
 }
-
-ul.socials {
+img.foodImage {
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 200px;
+  border-spacing: -50px;
 }
